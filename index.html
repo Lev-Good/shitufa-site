@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>שיתופא — שיתוף קבצים בין מחשבים בלי אינטרנט | לב טוב דיגיטל</title>
+<meta name="description" content="שיתופא מחברת מחשבים ברשת מקומית ומעבירה ביניהם קבצים, צ'אט וקבוצות — בלי אינטרנט, בלי שרת ובלי חשבון. חינמית ל-Windows, בעברית מלאה. כולל 10 סרטוני הדרכה.">
+<meta name="theme-color" content="#0b1224">
+<link rel="canonical" href="https://lev-good.github.io/shitufa-site/">
+<link rel="icon" href="assets/img/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/logo.png">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="שיתופא — שיתוף קבצים בין מחשבים בלי אינטרנט">
+<meta property="og:description" content="קבצים, צ'אט וקבוצות בין המחשבים בכולל — ישירות, בלי אינטרנט, בלי דרייב ובלי USB. חינמית ל-Windows.">
+<meta property="og:image" content="https://lev-good.github.io/shitufa-site/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="שיתופא — שיתוף קבצים ישיר בין מחשבים, בלי אינטרנט">
+<meta property="og:url" content="https://lev-good.github.io/shitufa-site/">
+<meta property="og:locale" content="he_IL">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://lev-good.github.io/shitufa-site/assets/img/og-image.png">
+
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">דילוג לתוכן הראשי</a>
+
+<!-- ══ כותרת ══ -->
+<header class="site-header" id="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="שיתופא — חזרה לראש הדף">
+      <img src="assets/img/logo.png" alt="" width="38" height="38">
+      <span class="brand-name">שיתופא</span>
+      <span class="brand-tag">ללא אינטרנט</span>
+    </a>
+
+    <nav class="main-nav" id="main-nav" aria-label="ניווט ראשי">
+      <a href="#why">למה זה טוב</a>
+      <a href="#how">איך זה עובד</a>
+      <a href="#videos">סרטוני הדרכה</a>
+      <a href="#features">יכולות</a>
+      <a href="#faq">שאלות</a>
+      <a class="nav-cta" href="#download">הורדה</a>
+    </nav>
+
+    <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="פתיחת תפריט">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <span id="top"></span>
+
+  <!-- ══ Hero ══ -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="blob blob-a"></div>
+      <div class="blob blob-b"></div>
+      <div class="grid-lines"></div>
+    </div>
+
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span> נבנתה במיוחד לעבודה בכולל — בלי אינטרנט</p>
+        <h1>קבצים, צ'אט וקבוצות בין המחשבים.<br><span class="hl">בלי אינטרנט. בלי דרייב. בלי USB.</span></h1>
+        <p class="lead">
+          שיתופא מחברת את המחשבים באותה רשת ישירות זה לזה. אתם גוררים קובץ — והוא כבר אצל החבר שלמד מולכם.
+          בלי חשבון, בלי שרת, בלי סינון שיחסום אתכם בדרך.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="#download">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            הורדה חינם ל-Windows
+          </a>
+          <a class="btn btn-ghost btn-lg" href="#videos">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg>
+            לצפייה ב־10 סרטונים
+          </a>
+        </div>
+
+        <ul class="hero-meta" aria-label="נתוני התוכנה">
+          <li id="hero-version">גרסה 1.2.3</li>
+          <li>Windows 10 / 11</li>
+          <li>עברית מלאה</li>
+          <li>חינמית</li>
+        </ul>
+      </div>
+
+      <!-- המחשת הממשק -->
+      <div class="hero-visual" aria-hidden="true">
+        <div class="app-mock">
+          <div class="mock-titlebar">
+            <span class="mock-logo"><img src="assets/img/logo.png" alt="" width="16" height="16"></span>
+            <span class="mock-title">שיתופא</span>
+            <span class="mock-lang"><b>עב</b> EN</span>
+          </div>
+          <div class="mock-body">
+            <div class="mock-side">
+              <div class="mock-me">
+                <span class="mock-label">המכשיר שלי</span>
+                <b>LAPTOP-RED</b>
+                <span class="mock-id">8969070181b1a5f1</span>
+              </div>
+              <div class="mock-nav">
+                <span class="active"><i class="mi"></i>קבצים</span>
+                <span><i class="mi"></i>עמיתים <em class="pill">3</em></span>
+                <span><i class="mi"></i>צ'אט <em class="pill red">2</em></span>
+                <span><i class="mi"></i>קבוצות</span>
+                <span><i class="mi"></i>הודעות מערכת</span>
+              </div>
+              <div class="mock-status"><i></i>השירות פועל</div>
+            </div>
+            <div class="mock-main">
+              <div class="mock-head">
+                <b>קבצים מסונכרנים</b>
+                <span class="mock-chip">+ הוסף קבצים</span>
+              </div>
+              <div class="mock-drop">
+                <span class="mock-plus">+</span>
+                <b>גרור קבצים לכאן</b>
+                <small>או לחץ לבחירת קבצים מהמחשב</small>
+              </div>
+              <ul class="mock-files">
+                <li><span class="fi pdf">PDF</span><div><b>דף מקורות — בבא קמא</b><small>2.4 MB · נשלח ל־3 עמיתים</small></div><span class="ok">✓</span></li>
+                <li><span class="fi aud">MP3</span><div><b>שיעור כללי — הרב</b><small>48 MB · מתקבל…</small></div><span class="prog"><i></i></span></li>
+                <li><span class="fi doc">DOC</span><div><b>חברותא — סיכום שבועי</b><small>180 KB · סונכרן</small></div><span class="ok">✓</span></li>
+              </ul>
+              <div class="mock-toast">
+                <span class="tick">✓</span>
+                <span>הקובץ נשלח ל־4 מחשבים ברשת</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="float-card float-1">
+          <span class="fc-icon">🔒</span>
+          <div><b>מוצפן בין המחשבים</b><small>TLS 1.3 · בלי שרת בדרך</small></div>
+        </div>
+        <div class="float-card float-2">
+          <span class="fc-icon">📡</span>
+          <div><b>ללא אינטרנט</b><small>עובד גם בלי ראוטר</small></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="marquee" role="list" aria-label="עיקרי התוכנה">
+        <span role="listitem">שיתוף קבצים אוטומטי</span>
+        <span role="listitem">צ'אט עם תגובות ותיוג</span>
+        <span role="listitem">קבוצות עם קבצים משותפים</span>
+        <span role="listitem">אישור מחשב חדש</span>
+        <span role="listitem">אבחון רשת בעברית</span>
+        <span role="listitem">עדכון אוטומטי</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ הבעיה ══ -->
+  <section class="section" id="why">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">מוכר לכם?</p>
+        <h2>להעביר דף מקורות לחבר בכולל לא אמור להיות סיפור</h2>
+        <p class="section-sub">בפועל, בלי אינטרנט זה נהיה סיפור. שלוש דרכים מוכרות — ושלושתן עולות זמן.</p>
+      </div>
+
+      <div class="pain-grid">
+        <article class="pain-card">
+          <div class="pain-icon">🔌</div>
+          <h3>המחשב בכולל בלי אינטרנט</h3>
+          <p>אין דרייב, אין מייל, ואין וואטסאפ פתוח על המחשב. נשארתם עם קובץ במחשב ואין דרך להעביר אותו הלאה.</p>
+          <div class="pain-tag">הפתרון: רשת מקומית, בלי לצאת החוצה</div>
+        </article>
+
+        <article class="pain-card">
+          <div class="pain-icon">💾</div>
+          <h3>דיסק און קי הולך לאיבוד</h3>
+          <p>צריך לזכור להביא, להעתיק, למחוק, להחזיר. ואם עוברים דרך מחשבים של אחרים — גם הווירוסים עוברים.</p>
+          <div class="pain-tag">הפתרון: העברה ישירה, בלי אמצעי פיזי</div>
+        </article>
+
+        <article class="pain-card">
+          <div class="pain-icon">🛡️</div>
+          <h3>הסינון חוסם את השיתוף</h3>
+          <p>דרייב, צ'אטים ומייל — תלוי בסינון. ולשלוח קובץ של 50MB בוואטסאפ זה גם איטי וגם לא נוח.</p>
+          <div class="pain-tag">הפתרון: התעבורה לא יוצאת לאינטרנט</div>
+        </article>
+      </div>
+
+      <div class="answer-banner">
+        <div class="answer-icon">⚡</div>
+        <div>
+          <h3>שיתופא פותרת את זה מהשורש</h3>
+          <p>שני מחשבים על אותה רשת — וזה מספיק. הקובץ עובר ישירות מהמחשב שלכם לזה של החבר, בתוך הבית מדרש. בלי חשבון, בלי ענן, בלי המתנה.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ איך זה עובד ══ -->
+  <section class="section section-tinted" id="how">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">שלושה צעדים</p>
+        <h2>מהתקנה ועד הקובץ אצל החבר — בפחות מחמש דקות</h2>
+        <p class="section-sub">פעם אחת מתקינים ומחברים. מאותו רגע הכול אוטומטי.</p>
+      </div>
+
+      <ol class="steps">
+        <li class="step">
+          <span class="step-no">1</span>
+          <h3>מתקינים</h3>
+          <p>מורידים את קובץ ה־Setup ולוחצים "הבא". אפשר גם גרסה ניידת בלי התקנה. בהפעלה הראשונה Windows תשאל אם לאשר גישה לרשת — לוחצים "אפשר גישה".</p>
+          <span class="step-note">חד־פעמי · דורש הרשאת מנהל רק לאישור חומת האש</span>
+        </li>
+        <li class="step">
+          <span class="step-no">2</span>
+          <h3>מחברים את המחשבים</h3>
+          <p>שני המחשבים על אותה רשת — נקודה חמה מהמחשב, בלוטות', כבל רשת או Wi‑Fi קיים. פותחים את שיתופא בשניהם, ומאשרים את המחשב החדש פעם אחת.</p>
+          <span class="step-note">גילוי אוטומטי תוך שניות</span>
+        </li>
+        <li class="step">
+          <span class="step-no">3</span>
+          <h3>מוסיפים קובץ</h3>
+          <p>גוררים קובץ לתיקייה של שיתופא — והוא נשלח לבד לכל המחשבים המחוברים. אפשר גם לפתוח צ'אט, ליצור קבוצה, ולשלוח הודעה לכל החברים.</p>
+          <span class="step-note">סנכרון שוטף · בלי לחיצה על "שלח"</span>
+        </li>
+      </ol>
+
+      <div class="connect-strip">
+        <h3>איך מחברים? ארבע דרכים — בוחרים את הנוחה</h3>
+        <div class="connect-grid">
+          <div class="connect-item">
+            <span class="ci-icon">📶</span>
+            <b>נקודה חמה מהמחשב</b>
+            <p>הדרך המומלצת. מפעילים "נקודה חמה ניידת" במחשב אחד, והשני מתחבר אליה. בלי ראוטר ובלי טלפון.</p>
+          </div>
+          <div class="connect-item">
+            <span class="ci-icon">🔵</span>
+            <b>בלוטות'</b>
+            <p>מצמדים פעם אחת בהגדרות Windows, ומפעילים "סנכרון דרך Bluetooth" בשיתופא. טוב לקרבה פיזית.</p>
+          </div>
+          <div class="connect-item">
+            <span class="ci-icon">🔗</span>
+            <b>כבל רשת</b>
+            <p>כבל Ethernet ישירות בין שני המחשבים. הכי מהיר — מצוין לקבצים כבדים.</p>
+          </div>
+          <div class="connect-item">
+            <span class="ci-icon">📡</span>
+            <b>Wi‑Fi קיים</b>
+            <p>יש ראוטר בבית המדרש? מחברים את שני המחשבים לאותה רשת. גם ראוטר בלי אינטרנט עובד.</p>
+          </div>
+        </div>
+        <p class="connect-foot">לא בטוחים מה מתאים לכם? <a href="#videos">סרטון 3</a> מראה את זה צעד־צעד, וסרטון 8 עובר על בלוטות' וכבל.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ הסרטונים ══ -->
+  <section class="section" id="videos">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">10 סרטוני הדרכה</p>
+        <h2>לומדים את התוכנה מהמסך — בלי לנחש</h2>
+        <p class="section-sub">כל סרטון קצר וממוקד, ומתנגן כאן בתוך הדף. אפשר לדלג לסרטון שמעניין אתכם ולחזור לשאר אחר כך.</p>
+      </div>
+
+      <div class="video-grid" id="video-grid">
+
+        <!-- 1 -->
+        <article class="video-card video-card--wide" data-video="v01">
+          <div class="video-frame">
+            <button class="video-facade" type="button" aria-label="נגן את הסרטון: מה זה שיתופא">
+              <span class="vf-bg vf-bg-1"></span>
+              <span class="vf-play" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </span>
+              <span class="vf-badge">פתיחה</span>
+              <span class="vf-num">01</span>
+              <span class="vf-duration" data-duration="2:10">2:10</span>
+              <span class="vf-soon">הסרטון בהכנה</span>
+            </button>
+          </div>
+          <div class="video-body">
+            <h3>מה זה שיתופא — ולמה זה שונה מדרייב</h3>
+            <p>סקירה של שתי דקות: מה הבעיה בכולל, איך עובד שיתוף ישיר בין מחשבים, ומה בדיוק מקבלים.</p>
+            <div class="video-tags"><span>מתחילים כאן</span><span>2:10</span></div>
+          </div>
+        </article>
+
+        <!-- 2 -->
+        <article class="video-card" data-video="v02">
+          <div class="video-frame">
+            <button class="video-facade" type="button" aria-label="נגן את הסרטון: התקנה ראשונית">
+              <span class="vf-bg vf-bg-2"></span>
+              <span class="vf-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+              <span class="vf-num">02</span>
+              <span class="vf-duration" data-duration="4:20">4:20</span>
+              <span class="vf-soon">הסרטון בהכנה</span>
+            </button>
+          </div>
+          <div class="video-body">
+            <h3>התקנה ראשונית — Setup או Portable</h3>
+            <p>הורדה, התקנה, אישור חומת האש, ובחירת שם למחשב. כולל מה עושים כשמופיע מסך האבטחה של Windows.</p>
+            <div class="video-tags"><span>התקנה</span><span>4:20</span></div>
+          </div>
+        </article>
+
+        <!-- 3 -->
+        <article class="video-card" data-video="v03">
+          <div class="video-frame">
+            <button class="video-facade" type="button" aria-label="נגן את הסרטון: חיבור שני מחשבים בלי ראוטר">
+              <span class="vf-bg vf-bg-3"></span>
+              <span class="vf-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+              <span class="vf-num">03</span>
+              <span class="vf-duration" data-duration="4:40">4:40</span>
+              <span class="vf-soon">הסרטון בהכנה</span>
+            </button>
+          </div>
+          <div class="video-body">
+            <h3>חיבור שני מחשבים בלי ראוטר</h3>
+            <p>הדרך הראשית: הפיכת המחשב לנקודה חמה ניידת, חיבור המחשב השני אליה, ופתיחת שיתופא בשניהם.</p>
+            <div class="video-tags"><span>חיבור</span><span>חשוב</span><span>4:40</span></div>
+          </div>
+        </article>
+
+        <!-- 4 -->
+        <article class="video-card" data-video="v04">
+          <div class="video-frame">
+            <button class="video-facade" type="button" aria-label="נגן את הסרטון: אישור מחשב חדש">
+              <span class="vf-bg vf-bg-4"></span>
+              <span class="vf-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+              <span class="vf-num">04</span>
+              <span class="vf-duration" data-duration="3:30">3:30</span>
+              <span class="vf-soon">הסרטון בהכנה</span>
+            </button>
+          </div>
+          <div class="video-body">
+            <h3>אישור מחשב חדש — ולמה בשני הצדדים</h3>
+            <p>מסך "עמיתים": ממתינים לאישור, אישור, הסרה וחסימה. ומה קורה כשמאשרים רק בצד אחד.</p>
+            <div class="video-tags"><span>אבטחה</span><span>3:30</span></div>
+          </div>
+        </article>
+
+        <!-- 5 -->
+        <article class="video-card" data-video="v05">
+          <div class="video-frame">
+            <button class="video-facade" type="button" aria-label="נגן את הסרטון: העברת קבצים">
+              <span class="vf-bg vf-bg-5"></span>
+              <span class="vf-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+              <span class="vf-num">05</span>
+              <span class="vf-duration" data-duration="5:10">5:10</span>
+              <span class="vf-soon">הסרטון בהכנה</span>
+            </button>
+          </div>
+          <div class="video-body">
+            <h3>העברת קבצים — גרירה, USB וחיפוש</h3>
+            <p>גרירה לחלון, כפתור "הוסף קבצים", העתקה מכונן USB, איפה נשמרים הקבצים, ואיך מוצאים אותם מהר.</p>
+            <div class="video-tags"><span>קבצים</span><span>5:10</span></div>
+          </div>
+        </article>
+
+        <!-- 6 -->
+        <article class="video-card" data-video="v06">
+          <div class="video-frame">
+            <button class="video-facade" type="button" aria-label="נגן את הסרטון: צ'אט בין חברים">
+              <span class="vf-bg vf-bg-6"></span>
+              <span class="vf-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+              <span class="vf-num">06</span>
+              <span class="vf-duration" data-duration="4:50">4:50</span>
+              <span class="vf-soon">הסרטון בהכנה</span>
+            </button>
+          </div>
+          <div class="video-body">
+            <h3>צ'אט: תגובות, ציטוט ותיוג</h3>
+            <p>שליחת הודעה לכולם, מענה עם ציטוט, תגובות מהירות, תיוג @ של עמית, וההחלטה אם לשמור היסטוריה.</p>
+            <div class="video-tags"><span>תקשורת</span><span>4:50</span></div>
+          </div>
+        </article>
+
+        <!-- 7 -->
+        <article class="video-card" data-video="v07">
+          <div class="video-frame">
+            <button class="video-facade" type="button" aria-label="נגן את הסרטון: קבוצות">
+              <span class="vf-bg vf-bg-7"></span>
+              <span class="vf-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+              <span class="vf-num">07</span>
+              <span class="vf-duration" data-duration="5:00">5:00</span>
+              <span class="vf-soon">הסרטון בהכנה</span>
+            </button>
+          </div>
+          <div class="video-body">
+            <h3>קבוצות — קבצים וצ'אט לחברי החבורה</h3>
+            <p>יצירת קבוצה, הזמנת חברים, העלאת קבצים משותפים, צ'אט קבוצתי, וניהול חברים או יציאה.</p>
+            <div class="video-tags"><span>קבוצות</span><span>5:00</span></div>
+          </div>
+        </article>
+
+        <!-- 8 -->
+        <article class="video-card" data-video="v08">
+          <div class="video-frame">
+            <button class="video-facade" type="button" aria-label="נגן את הסרטון: בלוטות' וכבל רשת">
+              <span class="vf-bg vf-bg-8"></span>
+              <span class="vf-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+              <span class="vf-num">08</span>
+              <span class="vf-duration" data-duration="3:40">3:40</span>
+              <span class="vf-soon">הסרטון בהכנה</span>
+            </button>
+          </div>
+          <div class="video-body">
+            <h3>מסלולים חלופיים: בלוטות' וכבל</h3>
+            <p>כשאין Wi‑Fi בכלל: צימוד בלוטות' ב-Windows, הפעלת הסנכרון, וחיבור בכבל רשת ישיר בין שני מחשבים.</p>
+            <div class="video-tags"><span>חיבור</span><span>3:40</span></div>
+          </div>
+        </article>
+
+        <!-- 9 -->
+        <article class="video-card" data-video="v09">
+          <div class="video-frame">
+            <button class="video-facade" type="button" aria-label="נגן את הסרטון: כשמשהו לא עובד">
+              <span class="vf-bg vf-bg-9"></span>
+              <span class="vf-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+              <span class="vf-num">09</span>
+              <span class="vf-duration" data-duration="4:30">4:30</span>
+              <span class="vf-soon">הסרטון בהכנה</span>
+            </button>
+          </div>
+          <div class="video-body">
+            <h3>כשמשהו לא עובד — אבחון רשת</h3>
+            <p>למה לא רואים עמיתים: חומת אש, רשת שונה, בידוד לקוחות בנקודה, או עותק ישן שתפוס פורטים. ואיך קוראים את האבחון.</p>
+            <div class="video-tags"><span>פתרון תקלות</span><span>4:30</span></div>
+          </div>
+        </article>
+
+        <!-- 10 -->
+        <article class="video-card" data-video="v10">
+          <div class="video-frame">
+            <button class="video-facade" type="button" aria-label="נגן את הסרטון: עדכונים, גיבוי והגדרות">
+              <span class="vf-bg vf-bg-10"></span>
+              <span class="vf-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+              <span class="vf-num">10</span>
+              <span class="vf-duration" data-duration="4:00">4:00</span>
+              <span class="vf-soon">הסרטון בהכנה</span>
+            </button>
+          </div>
+          <div class="video-body">
+            <h3>הגדרות, הפעלה אוטומטית ועדכונים</h3>
+            <p>מכסת אחסון, הפעלה עם עליית Windows, שינוי שם המחשב, בדיקת עדכונים, ולמה הנתונים נשמרים גם אחרי עדכון.</p>
+            <div class="video-tags"><span>תחזוקה</span><span>4:00</span></div>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="videos-foot">
+        הסרטונים מוטמעים מיוטיוב ומתנגנים כאן, בתוך הדף. אם הסרטון עדיין לא זמין —
+        <a href="#download">אפשר להתחיל מההורדה</a> ולחזור לכאן אחר כך.
+      </p>
+    </div>
+  </section>
+
+  <!-- ══ יכולות ══ -->
+  <section class="section section-tinted" id="features">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">מה יש בפנים</p>
+        <h2>כלי עבודה שלם לחבורה בכולל</h2>
+        <p class="section-sub">לא רק "שליחת קובץ". כל מה שצריך כדי לעבוד יחד — בתוכנה אחת, בלי אינטרנט.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature">
+          <div class="f-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <h3>סנכרון תיקייה אוטומטי</h3>
+          <p>כל קובץ שנכנס לתיקייה של שיתופא נשלח לבד לכל המחשבים המחוברים. בלי לבחור נמענים ובלי ללחוץ "שלח".</p>
+        </article>
+
+        <article class="feature">
+          <div class="f-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3>צ'אט עם תגובות ותיוג</h3>
+          <p>מענה עם ציטוט, חמישה סוגי תגובות, תיוג @ של עמית והתראות שולחן עבודה כשהחלון ממוזער.</p>
+        </article>
+
+        <article class="feature">
+          <div class="f-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+          </div>
+          <h3>קבוצות נפרדות</h3>
+          <p>קבוצה לכל חבורה או שיעור: קבצים משותפים וצ'אט פנימי, עם מנהל קבוצה והזמנת חברים.</p>
+        </article>
+
+        <article class="feature">
+          <div class="f-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <h3>אבטחה שאפשר להבין</h3>
+          <p>תעבורה מוצפנת (TLS 1.3), זהות מבוססת מפתח מקומי, מחשב חדש ממתין לאישור שלכם, ואפשר לחסום לתמיד.</p>
+        </article>
+
+        <article class="feature">
+          <div class="f-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+          </div>
+          <h3>עובד גם בלי ראוטר</h3>
+          <p>נקודה חמה מהמחשב, בלוטות' או כבל רשת. שיתופא מוצאת את המחשבים לבד, תוך שניות, בלי הגדרות רשת.</p>
+        </article>
+
+        <article class="feature">
+          <div class="f-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M9 15h6"/><path d="M9 11h6"/></svg>
+          </div>
+          <h3>קבצים כבדים, בלי דחיסה</h3>
+          <p>עד 200MB לקובץ — הקלטות שיעור, מצגות, סריקות של דפים. מספר הקבצים לא מוגבל, רק המקום בדיסק.</p>
+        </article>
+
+        <article class="feature">
+          <div class="f-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 3v18h18"/><path d="m7 14 4-4 3 3 5-6"/></svg>
+          </div>
+          <h3>אבחון רשת בעברית</h3>
+          <p>כשמשהו לא מתחבר, כפתור אחד בודק חומת אש, רשת ופורטים — ואומר בעברית פשוטה מה בדיוק מפריע.</p>
+        </article>
+
+        <article class="feature">
+          <div class="f-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 12a9 9 0 1 1-3-6.7"/><polyline points="21 3 21 9 15 9"/></svg>
+          </div>
+          <h3>עדכונים ונתונים שנשמרים</h3>
+          <p>עדכון גרסה מתוך התוכנה, וההגדרות, המפתחות והקבצים נשמרים גם אחרי עדכון והתקנה מחדש.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ השוואה ══ -->
+  <section class="section" id="compare">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">השוואה קצרה</p>
+        <h2>למה לא פשוט דרייב או וואטסאפ?</h2>
+        <p class="section-sub">כי בכולל, לפעמים אין אינטרנט בכלל — וגם כשיש, לא תמיד רוצים שהקובץ יעבור בדרך.</p>
+      </div>
+
+      <div class="table-wrap">
+        <table class="compare-table">
+          <caption class="sr-only">השוואה בין שיתופא, Google Drive, וואטסאפ ודיסק און קי</caption>
+          <thead>
+            <tr>
+              <th scope="col"> </th>
+              <th scope="col" class="col-us">שיתופא</th>
+              <th scope="col">דרייב / ענן</th>
+              <th scope="col">וואטסאפ</th>
+              <th scope="col">דיסק און קי</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">צריך אינטרנט?</th><td class="col-us"><span class="yes">לא</span></td><td>כן</td><td>כן</td><td>לא</td></tr>
+            <tr><th scope="row">צריך חשבון?</th><td class="col-us"><span class="yes">לא</span></td><td>חשבון גוגל</td><td>מספר טלפון</td><td>לא</td></tr>
+            <tr><th scope="row">תלוי בסינון</th><td class="col-us"><span class="yes">לא עובר באינטרנט</span></td><td>לרוב חסום</td><td>לרוב חסום במחשב</td><td>לא</td></tr>
+            <tr><th scope="row">העברת קובץ גדול</th><td class="col-us"><span class="yes">עד 200MB לקובץ</span></td><td>תלוי במכסה</td><td>מוגבל</td><td>תלוי בגודל הדיסק</td></tr>
+            <tr><th scope="row">איפה הקבצים נשמרים</th><td class="col-us"><span class="yes">אצלכם, בתיקייה מקומית</span></td><td>בשרת של גוגל</td><td>בשרת של מטא</td><td>על הדיסק</td></tr>
+            <tr><th scope="row">צ'אט וקבוצות</th><td class="col-us"><span class="yes">כן, ברשת המקומית</span></td><td>בסיסי</td><td>כן</td><td>לא</td></tr>
+            <tr><th scope="row">עלות</th><td class="col-us"><span class="yes">חינם</span></td><td>חינם / בתשלום</td><td>חינם</td><td>עלות הדיסק</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">ההשוואה מתייחסת לשימוש הרגיל בכולל. שיתופא אינה מחליפה גיבוי — קבצים חשובים כדאי לשמור גם במקום נוסף.</p>
+    </div>
+  </section>
+
+  <!-- ══ הורדה ══ -->
+  <section class="section section-dark" id="download">
+    <div class="wrap">
+      <div class="section-head section-head--light">
+        <p class="eyebrow">מוכנים להתחיל?</p>
+        <h2>מורידים, מתקינים, ומשתפים</h2>
+        <p class="section-sub">שתי גרסאות מאותה בנייה. שתיהן חינמיות, ושתיהן עובדות בדיוק אותו דבר.</p>
+      </div>
+
+      <div class="download-grid">
+        <article class="dl-card dl-card--primary">
+          <span class="dl-badge">מומלץ</span>
+          <h3>מתקין (Setup)</h3>
+          <p>התקנה רגילה עם קיצור דרך בתפריט ובשולחן העבודה. מתעדכן מתוך התוכנה ושומר על הנתונים וההגדרות.</p>
+          <ul class="dl-list">
+            <li>מתאים לרוב המשתמשים</li>
+            <li>עדכון גרסה בלחיצה</li>
+            <li>כ־117MB</li>
+          </ul>
+          <a class="btn btn-primary btn-block" id="dl-setup" href="https://github.com/Lev-Good/shitufa-releases/releases/latest" data-asset="setup">
+            הורדת המתקין
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </a>
+        </article>
+
+        <article class="dl-card">
+          <h3>ניידת (Portable)</h3>
+          <p>קובץ אחד שמריצים בלי להתקין — אפשר גם מדיסק און קי. הנתונים נשמרים ליד הקובץ.</p>
+          <ul class="dl-list">
+            <li>בלי הרשאות התקנה</li>
+            <li>נוח למחשבים משותפים</li>
+            <li>כ־117MB</li>
+          </ul>
+          <a class="btn btn-light btn-block" id="dl-portable" href="https://github.com/Lev-Good/shitufa-releases/releases/latest" data-asset="portable">
+            הורדת הגרסה הניידת
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </a>
+        </article>
+      </div>
+
+      <div class="req-grid">
+        <div class="req">
+          <span>🖥️</span>
+          <b>Windows 10 או 11</b>
+          <p>64 סיביות. התוכנה לא זמינה ל־Mac או לינוקס.</p>
+        </div>
+        <div class="req">
+          <span>📶</span>
+          <b>אותה רשת</b>
+          <p>נקודה חמה, בלוטות', כבל או Wi‑Fi. אין צורך באינטרנט.</p>
+        </div>
+        <div class="req">
+          <span>🛡️</span>
+          <b>אישור חומת אש</b>
+          <p>פעם אחת, בחלון של Windows. בלי זה המחשבים לא ימצאו זה את זה.</p>
+        </div>
+      </div>
+
+      <div class="dl-notes">
+        <p><b>מופיע מסך כחול של Windows?</b> זה קורה לתוכנות שאינן חתומות דיגיטלית. לוחצים "מידע נוסף" ואז "הפעל בכל זאת".</p>
+        <p><b>לא מוצאים את קובץ ההורדה?</b> <a href="https://github.com/Lev-Good/shitufa-releases/releases" target="_blank" rel="noopener">לכל הגרסאות בעמוד השחרורים</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ קהילה ══ -->
+  <section class="section" id="community">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">קהילה ופרסומים</p>
+        <h2>קראו עוד, ושאלו את מי שכבר משתמש</h2>
+        <p class="section-sub">שיתופא פורסמה ונדונה בפורומים החרדיים המובילים. שם גם אפשר להתייעץ, לדווח על תקלה ולהציע שיפור.</p>
+      </div>
+
+      <div class="forum-grid">
+        <a class="forum-card" href="https://mitmachim.top/post/1270193" target="_blank" rel="noopener">
+          <span class="forum-badge">מתמחים טופ</span>
+          <h3>פוסט ההשקה וההורדה</h3>
+          <p>הסבר, תגובות ותמיכה טכנית מהצוות והמשתמשים.</p>
+          <span class="forum-link">לצפייה בפוסט <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
+        </a>
+
+        <a class="forum-card" href="https://tora-forum.co.il/threads/%D7%9C%D7%94%D7%95%D7%A8%D7%93%D7%94-%D7%AA%D7%95%D7%9B%D7%A0%D7%AA-%D7%A9%D7%99%D7%AA%D7%95%D7%A4%D7%90-%D7%9E%D7%A8%D7%97%D7%91-%D7%A9%D7%99%D7%AA%D7%95%D7%A4%D7%99-%D7%9C%D7%9C%D7%90-%D7%90%D7%99%D7%A0%D7%98%D7%A8%D7%A0%D7%98-%D7%91%D7%9E%D7%99%D7%95%D7%97%D7%93-%D7%9C%D7%9B%D7%95%D7%9C%D7%9C%D7%99%D7%9D.113101/" target="_blank" rel="noopener">
+          <span class="forum-badge">פורום לתורה</span>
+          <h3>שיתופא — שיתופי מרחב ללא אינטרנט, במיוחד לכוללים</h3>
+          <p>הדיון המקורי, עם שאלות של אברכים וההסברים שניתנו להם.</p>
+          <span class="forum-link">לצפייה בדיון <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
+        </a>
+
+        <a class="forum-card" href="https://www.prog.co.il/threads/%D7%AA%D7%95%D7%9B%D7%A0%D7%AA-%D7%A9%D7%99%D7%AA%D7%95%D7%A4%D7%90-%D7%9B%D7%9C-%D7%94%D7%9B%D7%95%D7%9C%D7%9C-%D7%9E%D7%97%D7%95%D7%91%D7%A8%D7%99%D7%9D-%D7%96%D7%94-%D7%9C%D7%96%D7%94-%D7%9C%D7%9C%D7%90-%D7%90%D7%99%D7%A0%D7%98%D7%A8%D7%A0%D7%98.1158118/?aff=11EKK" target="_blank" rel="noopener">
+          <span class="forum-badge">פרוג</span>
+          <h3>כל הכולל מחוברים זה לזה — ללא אינטרנט</h3>
+          <p>סקירה, התרשמויות ודיון בצרכים של ציבור הלומדים.</p>
+          <span class="forum-link">לצפייה בדיון <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ שאלות נפוצות ══ -->
+  <section class="section section-tinted" id="faq">
+    <div class="wrap wrap-narrow">
+      <div class="section-head">
+        <p class="eyebrow">שאלות נפוצות</p>
+        <h2>מה ששואלים אותנו לפני שמתקינים</h2>
+      </div>
+
+      <div class="faq">
+        <details>
+          <summary>באמת עובד בלי אינטרנט?</summary>
+          <div class="faq-body">
+            <p>כן. שיתופא מוצאת מחשבים באותה רשת מקומית ומעבירה ביניהם קבצים והודעות ישירות. אין שרת ואין חיבור לאינטרנט בדרך. גם אם הראוטר מנותק מהאינטרנט לגמרי — זה ממשיך לעבוד.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>אני צריך ראוטר?</summary>
+          <div class="faq-body">
+            <p>לא. הדרך הפשוטה ביותר היא להפוך מחשב אחד ל"נקודה חמה ניידת" מתוך Windows, והמחשב השני מתחבר אליו. אפשר גם בלוטות' או כבל רשת ישיר. ראוטר קיים בבית המדרש — גם טוב, גם אם הוא בלי אינטרנט.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>התעבורה עוברת בסינון?</summary>
+          <div class="faq-body">
+            <p>לא. בזמן סנכרון רגיל התעבורה נשארת ברשת המקומית ואינה יוצאת לאינטרנט, ולכן אין סינון שמעורב. קיימת אפשרות אופציונלית של "ריליי" לחיבור בין מחשבים ברשתות שונות דרך האינטרנט — היא כבויה כברירת מחדל, ומופעלת רק ביודעין.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>מה קורה עם האבטחה?</summary>
+          <div class="faq-body">
+            <p>התעבורה בין המחשבים מוצפנת (TLS 1.3), והזהות של כל מחשב נבדקת באמצעות מפתח מקומי. מחשב חדש שפוגש אתכם בפעם הראשונה לא מסתנכרן עד שתאשרו אותו — ובצד השני יאשרו אתכם. אפשר להסיר עמית או לחסום אותו לתמיד.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>כמה זה עולה?</summary>
+          <div class="faq-body">
+            <p>חינם. אין חשבון, אין מנוי ואין פרסומות. אפשר להוריד, להתקין ולהשתמש בכולל שלם.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>אפשר להעביר קובץ גדול, כמו הקלטת שיעור?</summary>
+          <div class="faq-body">
+            <p>כן. המגבלה לקובץ בודד היא 200MB, ומספר הקבצים אינו מוגבל — רק המקום הפנוי בדיסק. לתיקיית "מה שהתקבל" אפשר להגדיר מכסת אחסון, ואז קבצים ישנים נמחקים אוטומטית כשעוברים אותה.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>אם אמחק קובץ — הוא יימחק אצל כולם?</summary>
+          <div class="faq-body">
+            <p>לא. כל מחשב שומר את העותק שלו. מחיקה אצלכם מסירה את הקובץ מהרשימה שלכם בלבד — מה שבדרך כלל דווקא נוח, כי חבר שכבר קיבל את הדף לא מאבד אותו.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>יש גרסה למק או ללינוקס?</summary>
+          <div class="faq-body">
+            <p>לא. שיתופא נבנתה ל-Windows 10/11 (64 סיביות). זו גם הסיבה שהיא משתלבת כל כך טוב עם מה שיש בכולל.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>איך מעדכנים גרסה?</summary>
+          <div class="faq-body">
+            <p>בהגדרות → "עדכוני תוכנה מהאינטרנט" → "בדוק עדכונים עכשיו". אם יש גרסה חדשה אפשר להוריד אותה משם ישירות. הנתונים, המפתחות והקבצים נשמרים גם אחרי העדכון.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>צריך להתקין בכל מחשב מחדש?</summary>
+          <div class="faq-body">
+            <p>כן, שיתופא צריכה להיות מותקנת ופתוחה בכל מחשב שמשתתף בשיתוף. אחרי החיבור הראשון היא זוכרת את העמיתים, ותתחבר שוב לבד בפעם הבאה.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CTA אחרון ══ -->
+  <section class="final-cta">
+    <div class="wrap final-inner">
+      <img src="assets/img/logo.png" alt="לוגו שיתופא" width="56" height="56">
+      <h2>מתחילים בשיתוף אחד — וממשיכים בכולל שלם</h2>
+      <p>הורדה חינם, התקנה של דקה, ובלי אינטרנט בכלל.</p>
+      <a class="btn btn-primary btn-lg" href="#download">להורדת שיתופא</a>
+    </div>
+  </section>
+</main>
+
+<!-- ══ Footer ══ -->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <img src="assets/img/logo.png" alt="" width="44" height="44">
+      <div>
+        <b>שיתופא</b>
+        <p>שיתוף קבצים, צ'אט וקבוצות בין מחשבים ברשת מקומית — בלי אינטרנט ובלי שרת.</p>
+      </div>
+    </div>
+
+    <nav class="footer-nav" aria-label="ניווט בתחתית הדף">
+      <a href="#why">למה שיתופא</a>
+      <a href="#how">איך זה עובד</a>
+      <a href="#videos">סרטוני הדרכה</a>
+      <a href="#features">יכולות</a>
+      <a href="#faq">שאלות נפוצות</a>
+      <a href="#download">הורדה</a>
+    </nav>
+
+    <div class="footer-forums">
+      <b>פרסומים בקהילה</b>
+      <a href="https://mitmachim.top/post/1270193" target="_blank" rel="noopener">מתמחים טופ</a>
+      <a href="https://tora-forum.co.il/threads/%D7%9C%D7%94%D7%95%D7%A8%D7%93%D7%94-%D7%AA%D7%95%D7%9B%D7%A0%D7%AA-%D7%A9%D7%99%D7%AA%D7%95%D7%A4%D7%90-%D7%9E%D7%A8%D7%97%D7%91-%D7%A9%D7%99%D7%AA%D7%95%D7%A4%D7%99-%D7%9C%D7%9C%D7%90-%D7%90%D7%99%D7%A0%D7%98%D7%A8%D7%A0%D7%98-%D7%91%D7%9E%D7%99%D7%95%D7%97%D7%93-%D7%9C%D7%9B%D7%95%D7%9C%D7%9C%D7%99%D7%9D.113101/" target="_blank" rel="noopener">פורום לתורה</a>
+      <a href="https://www.prog.co.il/threads/%D7%AA%D7%95%D7%9B%D7%A0%D7%AA-%D7%A9%D7%99%D7%AA%D7%95%D7%A4%D7%90-%D7%9B%D7%9C-%D7%94%D7%9B%D7%95%D7%9C%D7%9C-%D7%9E%D7%97%D7%95%D7%91%D7%A8%D7%99%D7%9D-%D7%96%D7%94-%D7%9C%D7%96%D7%94-%D7%9C%D7%9C%D7%90-%D7%90%D7%99%D7%A0%D7%98%D7%A8%D7%A0%D7%98.1158118/?aff=11EKK" target="_blank" rel="noopener">פרוג</a>
+    </div>
+
+    <div class="footer-credit">
+      <b>פיתוח ואחזקה</b>
+      <a href="https://digital.levtov.uk/" target="_blank" rel="noopener" class="credit-link">
+        <span>נבנה ע"י <strong>לב טוב דיגיטל</strong></span>
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+      <a href="mailto:mytovmail@gmail.com">mytovmail@gmail.com</a>
+      <p class="footer-soft">להצעות שדרוג, פיתוח תוכנה והתאמות אישיות.</p>
+    </div>
+  </div>
+
+  <div class="wrap footer-bottom">
+    <p>© <span id="year">2026</span> לב טוב דיגיטל. כל הזכויות שמורות.</p>
+    <p>שיתופא מסופקת כפי שהיא ("AS IS"), בלי אחריות מפורשת או משתמעת. השימוש באחריות המשתמש בלבד.</p>
+  </div>
+</footer>
+
+<script src="assets/js/videos.js"></script>
+<script src="assets/js/main.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "שיתופא",
+  "alternateName": "Shitufa",
+  "operatingSystem": "Windows 10, Windows 11",
+  "applicationCategory": "UtilitiesApplication",
+  "description": "שיתוף קבצים, צ'אט וקבוצות ישירות בין מחשבים ברשת מקומית, ללא אינטרנט וללא שרת מרכזי.",
+  "inLanguage": "he",
+  "softwareVersion": "1.2.3",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "ILS" },
+  "author": { "@type": "Organization", "name": "לב טוב דיגיטל", "url": "https://digital.levtov.uk/" }
+}
+</script>
+</body>
+</html>

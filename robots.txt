@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lev-good.github.io/shitufa-site/sitemap.xml
