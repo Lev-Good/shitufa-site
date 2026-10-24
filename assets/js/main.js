@@ -198,31 +198,81 @@
   }
 
   /* ── הורדות: תמיד הגרסה האחרונה ────────────────────────────── */
-  // ברירת המחדל בקישור היא עמוד השחרורים. אם ה-API זמין, הקישור מוחלף
-  // ישירות בקובץ המתאים (Setup / Portable) — כך אין צורך לעדכן כתובות ידנית
-  // בכל גרסה, ואם ה-API חסום או חורג ממכסה, נשאר עמוד השחרורים שעובד תמיד.
+  // שני הכפתורים נפתרים בזמן אמת מעמוד השחרורים של shitufa-releases:
+  // האחד לקובץ ה-Setup והשני לקובץ ה-Portable, תמיד לגרסה האחרונה.
+  // אם ה-API חסום או חורג ממכסה — הקישורים נשארים על עמוד השחרורים,
+  // שגם הוא מוביל לאותם שני קבצים, ולכן אין מצב של כפתור מת.
   (function initDownloads() {
     var setup = document.getElementById('dl-setup');
     var portable = document.getElementById('dl-portable');
+    var setupFile = document.getElementById('dl-setup-file');
+    var portableFile = document.getElementById('dl-portable-file');
     var versionEl = document.getElementById('hero-version');
+    var badgeVersion = document.getElementById('dl-version');
     if (!setup && !portable) return;
 
     var API = 'https://api.github.com/repos/Lev-Good/shitufa-releases/releases/latest';
+    var CACHE_KEY = 'shitufa:latest-release:v1';
+    var CACHE_TTL = 30 * 60 * 1000; // חצי שעה — חוסך את מכסת ה-API
+
+    var sizeLabel = function (bytes) {
+      if (!bytes || typeof bytes !== 'number') return '';
+      return Math.round(bytes / 1000000) + ' MB';
+    };
+
+    var apply = function (release) {
+      if (!release || !Array.isArray(release.assets)) return false;
+
+      var assets = release.assets.filter(function (a) { return /\.exe$/i.test(a.name); });
+      var setupAsset = assets.find(function (a) { return /setup/i.test(a.name); });
+      var portableAsset = assets.find(function (a) { return /portable/i.test(a.name); });
+      var version = String(release.tag_name || '').replace(/^v/i, '').trim();
+
+      if (setup && setupAsset) {
+        setup.href = setupAsset.browser_download_url;
+        setup.setAttribute('download', setupAsset.name);
+        if (setupFile) setupFile.textContent = setupAsset.name + (sizeLabel(setupAsset.size) ? ' · ' + sizeLabel(setupAsset.size) : '');
+      }
+
+      if (portable && portableAsset) {
+        portable.href = portableAsset.browser_download_url;
+        portable.setAttribute('download', portableAsset.name);
+        if (portableFile) portableFile.textContent = portableAsset.name + (sizeLabel(portableAsset.size) ? ' · ' + sizeLabel(portableAsset.size) : '');
+      }
+
+      if (version) {
+        if (versionEl) versionEl.textContent = 'גרסה ' + version;
+        if (badgeVersion) badgeVersion.textContent = version;
+      }
+
+      return !!(setupAsset || portableAsset);
+    };
+
+    var readCache = function () {
+      try {
+        var raw = window.localStorage.getItem(CACHE_KEY);
+        if (!raw) return null;
+        var parsed = JSON.parse(raw);
+        if (!parsed || !parsed.at || (Date.now() - parsed.at) > CACHE_TTL) return null;
+        return parsed.release;
+      } catch (err) { return null; }
+    };
+
+    var writeCache = function (release) {
+      try {
+        window.localStorage.setItem(CACHE_KEY, JSON.stringify({ at: Date.now(), release: release }));
+      } catch (err) { /* מצב פרטי / אחסון חסום — לא קריטי */ }
+    };
+
+    var cached = readCache();
+    if (cached) apply(cached);
+
+    if (cached) return;
 
     fetch(API, { headers: { Accept: 'application/vnd.github+json' } })
       .then(function (res) { return res.ok ? res.json() : null; })
       .then(function (release) {
-        if (!release || !Array.isArray(release.assets)) return;
-
-        var assets = release.assets.filter(function (a) { return /\.exe$/i.test(a.name); });
-        var setupAsset = assets.find(function (a) { return /setup/i.test(a.name); });
-        var portableAsset = assets.find(function (a) { return /portable/i.test(a.name); });
-
-        if (setup && setupAsset) setup.href = setupAsset.browser_download_url;
-        if (portable && portableAsset) portable.href = portableAsset.browser_download_url;
-
-        var version = String(release.tag_name || '').replace(/^v/i, '').trim();
-        if (version && versionEl) versionEl.textContent = 'גרסה ' + version;
+        if (apply(release)) writeCache(release);
       })
       .catch(function () { /* נשארים על עמוד השחרורים */ });
   })();

@@ -936,6 +936,43 @@ ul, ol { margin: 0; padding: 0; }
 }
 .dl-card .btn { margin-top: auto; }
 
+/* מספר הגרסה שמתעדכן מהעמוד של GitHub, ושם הקובץ שירד בפועל */
+.dl-latest {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+  margin: 18px 0 0;
+  font-size: .86rem;
+  color: #c3cae3;
+}
+.dl-latest b {
+  color: #fff;
+  font-size: .95rem;
+  direction: ltr;
+}
+.dl-latest-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 0 4px rgba(74, 222, 128, .18);
+  flex: 0 0 auto;
+}
+.dl-latest-note {
+  color: #98a1c2;
+  font-size: .78rem;
+}
+.dl-file {
+  margin: 10px 0 0;
+  min-height: 1.3em;
+  text-align: center;
+  font-size: .74rem;
+  color: #98a1c2;
+  unicode-bidi: plaintext;
+  word-break: break-word;
+}
+
 .req-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
