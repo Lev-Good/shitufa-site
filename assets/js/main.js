@@ -15,6 +15,17 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
+  // גיבוי לאירועי גלילה (חלק מהדפדפנים מדללים אותם): עוקבים אחרי עוגן
+  // בראש העמוד, וברגע שהוא יוצא מהמסך — הכותרת מקבלת רקע אטום.
+  var sentinel = document.getElementById('top');
+  if (header && sentinel && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        header.classList.toggle('scrolled', !entry.isIntersecting);
+      });
+    }, { threshold: 0 }).observe(sentinel);
+  }
+
   /* ── תפריט מובייל ──────────────────────────────────────────── */
   var toggle = document.getElementById('menu-toggle');
   var nav = document.getElementById('main-nav');
