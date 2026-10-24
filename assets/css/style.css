@@ -30,7 +30,7 @@
   --ink-3: #182444;
   --text: #16203a;
   --muted: #5b6478;
-  --muted-2: #7b8499;
+  --muted-2: #68718a;
   --bg: #ffffff;
   --surface: #f6f7fc;
   --surface-2: #eef0f9;
@@ -1090,7 +1090,7 @@ ul, ol { margin: 0; padding: 0; }
   font-size: .88rem;
 }
 .credit-link strong { color: #fff; }
-.footer-soft { color: #7f89a8; font-size: .78rem; margin: 0; }
+.footer-soft { color: #9aa3bf; font-size: .78rem; margin: 0; }
 
 .footer-bottom {
   display: flex;
@@ -1098,7 +1098,7 @@ ul, ol { margin: 0; padding: 0; }
   justify-content: space-between;
   gap: 8px 24px;
   padding-top: 22px;
-  color: #8c95b3;
+  color: #a3abc6;
   font-size: .78rem;
 }
 .footer-bottom p { margin: 0; }
