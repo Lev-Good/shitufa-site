@@ -63,6 +63,38 @@
 
   /* ── נגני יוטיוב ───────────────────────────────────────────── */
   var videos = typeof SHITUFA_VIDEOS === 'object' && SHITUFA_VIDEOS ? SHITUFA_VIDEOS : {};
+  var videoModal = document.getElementById('video-modal');
+  var videoModalContent = document.getElementById('video-modal-content');
+
+  function openVideoModal() {
+    if (!videoModal) return;
+    videoModal.classList.add('is-open');
+    videoModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeVideoModal() {
+    if (!videoModal) return;
+    videoModal.classList.remove('is-open');
+    videoModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (videoModalContent) {
+      videoModalContent.innerHTML = '';
+    }
+  }
+
+  if (videoModal) {
+    videoModal.addEventListener('click', function (e) {
+      if (e.target.hasAttribute('data-close')) {
+        closeVideoModal();
+      }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && videoModal.classList.contains('is-open')) {
+        closeVideoModal();
+      }
+    });
+  }
 
   // סרטון יכול להתנגן משני מקורות: קובץ מקומי (data-file) או יוטיוב
   // (SHITUFA_VIDEOS). ברגע שממלאים מזהה יוטיוב — הוא גובר אוטומטית.
@@ -76,8 +108,9 @@
       return;
     }
 
-    var frame = card.querySelector('.video-frame');
-    if (!frame) return;
+    if (!videoModalContent) return;
+
+    videoModalContent.innerHTML = '';
 
     if (!id && file) {
       var video = document.createElement('video');
@@ -89,8 +122,8 @@
       var poster = card.getAttribute('data-poster');
       if (poster) video.poster = poster;
       video.setAttribute('aria-label', (card.querySelector('h3') || {}).textContent || 'סרטון הדרכה');
-      facade.remove();
-      frame.appendChild(video);
+      videoModalContent.appendChild(video);
+      openVideoModal();
       return;
     }
 
@@ -104,24 +137,8 @@
     iframe.setAttribute('loading', 'lazy');
     iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
 
-    facade.remove();
-    frame.appendChild(iframe);
-
-    // עצירה כשעוברים משם — כדי שסרטון לא ימשיך להתנגן ברקע
-    if ('IntersectionObserver' in window) {
-      var stopWhenHidden = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) return;
-          try {
-            iframe.contentWindow.postMessage(
-              JSON.stringify({ event: 'command', func: 'pauseVideo', args: [] }),
-              'https://www.youtube-nocookie.com'
-            );
-          } catch (err) { /* לא קריטי */ }
-        });
-      }, { threshold: 0.05 });
-      stopWhenHidden.observe(frame);
-    }
+    videoModalContent.appendChild(iframe);
+    openVideoModal();
   }
 
   Array.prototype.forEach.call(document.querySelectorAll('[data-video]'), function (card) {
