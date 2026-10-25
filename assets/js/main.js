@@ -157,7 +157,7 @@
         posterImg.src = localPoster;
         posterImg.alt = '';
         posterImg.loading = 'lazy';
-        posterImg.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;';
+        posterImg.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;';
         facade.insertBefore(posterImg, facade.firstChild);
       }
       var soonLocal = facade.querySelector('.vf-soon');
@@ -178,7 +178,7 @@
         img.dataset.fallback = '1';
         img.src = 'https://i.ytimg.com/vi/' + encodeURIComponent(id) + '/hqdefault.jpg';
       });
-      img.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;';
+      img.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;';
       facade.insertBefore(img, facade.firstChild);
       facade.setAttribute('aria-label', 'נגן את הסרטון: ' + title);
       var soon = facade.querySelector('.vf-soon');
