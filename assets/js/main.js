@@ -64,17 +64,35 @@
   /* ── נגני יוטיוב ───────────────────────────────────────────── */
   var videos = typeof SHITUFA_VIDEOS === 'object' && SHITUFA_VIDEOS ? SHITUFA_VIDEOS : {};
 
+  // סרטון יכול להתנגן משני מקורות: קובץ מקומי (data-file) או יוטיוב
+  // (SHITUFA_VIDEOS). ברגע שממלאים מזהה יוטיוב — הוא גובר אוטומטית.
   function playVideo(card, facade) {
     var key = card.getAttribute('data-video');
     var id = (videos[key] || '').trim();
+    var file = (card.getAttribute('data-file') || '').trim();
 
-    if (!id) {
+    if (!id && !file) {
       toast('הסרטון הזה עוד בהכנה — בינתיים אפשר להוריד את התוכנה ולהתחיל.');
       return;
     }
 
     var frame = card.querySelector('.video-frame');
     if (!frame) return;
+
+    if (!id && file) {
+      var video = document.createElement('video');
+      video.src = file;
+      video.controls = true;
+      video.autoplay = true;
+      video.playsInline = true;
+      video.preload = 'metadata';
+      var poster = card.getAttribute('data-poster');
+      if (poster) video.poster = poster;
+      video.setAttribute('aria-label', (card.querySelector('h3') || {}).textContent || 'סרטון הדרכה');
+      facade.remove();
+      frame.appendChild(video);
+      return;
+    }
 
     var iframe = document.createElement('iframe');
     iframe.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) +
@@ -113,6 +131,24 @@
     var key = card.getAttribute('data-video');
     var id = (videos[key] || '').trim();
     var title = (card.querySelector('h3') || {}).textContent || '';
+
+    if (!id && !facade.querySelector('img')) {
+      // אין עדיין יוטיוב, אבל יש קובץ מקומי: משתמשים בתמונת הפתיח שלו
+      var localPoster = card.getAttribute('data-poster');
+      if (localPoster) {
+        var posterImg = document.createElement('img');
+        posterImg.src = localPoster;
+        posterImg.alt = '';
+        posterImg.loading = 'lazy';
+        posterImg.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;';
+        facade.insertBefore(posterImg, facade.firstChild);
+      }
+      var soonLocal = facade.querySelector('.vf-soon');
+      if (soonLocal) soonLocal.remove();
+      facade.setAttribute('aria-label', 'נגן את הסרטון: ' + title);
+      facade.addEventListener('click', function () { playVideo(card, facade); });
+      return;
+    }
 
     if (id) {
       var img = document.createElement('img');
